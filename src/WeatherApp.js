@@ -6,37 +6,39 @@ import Forecast from "./Forecast";
 import "./WeatherApp.css";
 
 export default function WeatherApp() {
-  <div className="WeatherApp">
-    <header className="WeatherApp-search">
-      <div className="d-flex justify-content-center Dictionary">
-        <form className="d-flex form">
-          <input
-            type="search"
-            className="form-control"
-            autoComplete="off"
-            autoFocus="on"
-          />
-          <button
-            type="submit"
-            value="Search"
-            autoFocus="on"
-            className="d-flex btn default SearchButton"
-          ></button>
-        </form>
-      </div>
-    </header>
-    <main className="WeatherApp-main">
-      <PlaceInfo />
-    </main>
-    <aside className="WeatherApp-aside-1">
-      <WeatherTemperature />
-    </aside>
-    <aside className="WeatherApp-aside-2">
-      <WeatherProperties />
-    </aside>
-    <main className="WeatherApp-forecast">
-      <Forecast />
-    </main>
-    <footer className="WeatherApp-footer"></footer>
-  </div>;
+  return (
+    <div className="WeatherApp">
+      <header className="WeatherApp-search">
+        <div className="d-flex justify-content-center Dictionary">
+          <form className="d-flex form">
+            <input
+              type="search"
+              className="form-control"
+              autoComplete="off"
+              autoFocus="on"
+            />
+            <button
+              type="submit"
+              value="Search"
+              autoFocus="on"
+              className="d-flex btn default SearchButton"
+            ></button>
+          </form>
+        </div>
+      </header>
+      <main className="WeatherApp-main">
+        <PlaceInfo />
+      </main>
+      <aside className="WeatherApp-aside-1">
+        <WeatherTemperature />
+      </aside>
+      <aside className="WeatherApp-aside-2">
+        <WeatherProperties />
+      </aside>
+      <main className="WeatherApp-forecast">
+        <Forecast />
+      </main>
+      <footer className="WeatherApp-footer"></footer>
+    </div>
+  );
 }
