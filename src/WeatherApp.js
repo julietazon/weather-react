@@ -4,6 +4,8 @@ import WeatherTemperature from "./WeatherTemperature";
 import WeatherProperties from "./WeatherProperties";
 import Forecast from "./Forecast";
 import "./WeatherApp.css";
+import axios from "axios";
+import Loader from "react-loader-spinner";
 
 export default function WeatherApp() {
   return (
