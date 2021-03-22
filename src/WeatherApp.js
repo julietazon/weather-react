@@ -73,7 +73,7 @@ export default function WeatherApp(props) {
           <PlaceInfo data={weatherData} />
         </main>
         <aside className="WeatherApp-aside-1">
-          <WeatherTemperature />
+          <WeatherTemperature data={weatherData} />
         </aside>
         <aside className="WeatherApp-aside-2">
           <WeatherProperties />
