@@ -1,3 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 1rem;
+  flex: 1 100%;
+  margin: 0 auto;
+}
+
 @media all and (min-width: 600px) {
   .aside {
     flex: 1 0 0;
@@ -23,4 +36,159 @@
   .WeatherApp-footer {
     order: 6;
   }
+}
+
+.WeatherApp {
+  color: rgb(255, 255, 255);
+  border: 0.06rem solid #dadde1;
+  border-radius: 1.25rem;
+  background-color: rgb(14, 114, 208);
+}
+
+.WeatherApp .form {
+  flex: 0.5;
+  position: relative;
+}
+
+.WeatherApp .form button {
+  margin-left: 1rem;
+  display: flex;
+}
+
+.SearchButton {
+  background: rgba(255, 255, 255, 0.193);
+  color: white;
+  border: 0.15rem solid rgba(255, 255, 255, 0.193);
+  display: inline-block;
+}
+
+.Weather .WeatherApp .Now {
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
+.WeatherApp .SearchButton:hover {
+  background: rgba(14, 114, 208, 0.33);
+  color: white;
+  border: 0.15rem solid rgba(255, 255, 255, 0.193);
+}
+
+.PlaceInfo {
+  align-items: start;
+}
+
+.PlaceInfo ul {
+  list-style: none;
+  text-transform: capitalize;
+  line-height: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  display: block;
+  text-align: left;
+}
+
+.PlaceInfo-city {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+.WeatherTemperature {
+  align-items: center;
+}
+
+.WeatherTemperature ul {
+  list-style: none;
+  display: inline;
+  margin: 0 auto;
+}
+
+.WeatherTemperature li {
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.MainWeatherIcon img {
+  width: 7.5rem;
+  margin-top: 3.5rem;
+  margin-left: 1rem;
+}
+
+.MainWeatherDegrees {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 8rem;
+  font-weight: 200;
+  display: inline;
+  margin: 0 auto;
+}
+
+.WeatherDegrees .MainTemperatureUnits {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-weight: 300;
+  display: block;
+  position: relative;
+  bottom: 8.5rem;
+  left: 7rem;
+}
+
+.MainTemperatureUnits:hover {
+  cursor: pointer;
+}
+
+.WeatherProperties ul {
+  list-style: none;
+  line-height: 3rem;
+  font-weight: 300;
+}
+
+.WeatherProperties span {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.WeatherProperties .TemperaturePropertiesIcon {
+  width: 1.7rem;
+}
+
+.WeatherProperties .FeelsLikeIcon {
+  width: 0.7rem;
+}
+
+.Forecast img {
+  width: 3rem;
+}
+
+.Forecast ul {
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  justify-content: space-around;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+footer {
+  font-size: smaller;
+  letter-spacing: 0.1rem;
+  color: rgb(70, 70, 70);
+}
+
+footer .Link {
+  font-weight: bold;
+}
+
+footer .Link:hover {
+  cursor: pointer;
 }

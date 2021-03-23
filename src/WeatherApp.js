@@ -50,38 +50,44 @@ export default function WeatherApp(props) {
   if (weatherData.ready) {
     return (
       <div className="WeatherApp">
-        <header className="WeatherApp-search">
-          <div className="d-flex justify-content-center Dictionary">
-            <form onSubmit={handleSubmit} className="d-flex form">
-              <input
-                type="search"
-                className="form-control"
-                autoComplete="off"
-                autoFocus="on"
-                onChange={handleCityChange}
-              />
-              <button
-                type="submit"
-                value="Search"
-                autoFocus="on"
-                className="d-flex btn default SearchButton"
-              ></button>
-            </form>
-          </div>
-        </header>
-        <main className="WeatherApp-main">
-          <PlaceInfo data={weatherData} />
-        </main>
-        <aside className="WeatherApp-aside-1">
-          <WeatherTemperature data={weatherData} />
-        </aside>
-        <aside className="WeatherApp-aside-2">
-          <WeatherProperties data={weatherData} />
-        </aside>
-        <main className="WeatherApp-forecast">
-          <Forecast />
-        </main>
-        <footer className="WeatherApp-footer"></footer>
+        <div className="wrapper">
+          <header className="WeatherApp-search">
+            <div className="d-flex justify-content-center Dictionary">
+              <form onSubmit={handleSubmit} className="d-flex form">
+                <input
+                  type="search"
+                  className="form-control"
+                  autoComplete="off"
+                  autoFocus="on"
+                  onChange={handleCityChange}
+                />
+                <button
+                  type="submit"
+                  value="Search"
+                  autoFocus="on"
+                  className="d-flex btn default SearchButton"
+                >
+                  Search
+                </button>
+                <button className="btn btn-primary SearchButton Now">
+                  Now
+                </button>
+              </form>
+            </div>
+          </header>
+          <main className="WeatherApp-main">
+            <PlaceInfo data={weatherData} />
+          </main>
+          <aside className="aside WeatherApp-aside-1">
+            <WeatherTemperature data={weatherData} />
+          </aside>
+          <aside className="aside WeatherApp-aside-2">
+            <WeatherProperties data={weatherData} />
+          </aside>
+          <main className="WeatherApp-forecast">
+            <Forecast lat={weatherData.lat} lon={weatherData.lon} />
+          </main>
+        </div>
       </div>
     );
   } else {

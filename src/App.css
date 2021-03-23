@@ -4,14 +4,6 @@
   margin: 0 auto;
 }
 
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-}
-
-.wrapper > * {
-  padding: 1rem;
-  flex: 1 100%;
+.App {
+  margin: 0.5rem;
 }

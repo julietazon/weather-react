@@ -4,15 +4,15 @@ import WeatherDegrees from "./WeatherDegrees";
 
 export default function WeatherTemperature(props) {
   return (
-    <div className="WeatherTemperature">
-      <ul>
-        <li>
+    <div className="d-flex justify-content-start WeatherTemperature">
+      <div className="d-flex justify-content-start row">
+        <div className="col MainWeatherIcon">
           <WeatherIcon code={props.data.icon} alt={props.data.description} />
-        </li>
-        <li>
+        </div>
+        <div className="col MainWeatherDegrees">
           <WeatherDegrees celsius={props.data.temperature} />
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   );
 }

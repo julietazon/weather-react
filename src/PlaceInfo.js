@@ -3,8 +3,8 @@ import AwesomeDate from "./AwesomeDate";
 
 export default function PlaceInfo(props) {
   return (
-    <div className="PlaceInfo">
-      <ul>
+    <div className="row PlaceInfo">
+      <ul className="">
         <li className="PlaceInfo-city">
           <span>{props.data.city}</span>
           <span>, </span>
