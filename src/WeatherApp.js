@@ -10,6 +10,9 @@ import "./WeatherApp.css";
 export default function WeatherApp(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?`;
+  const apiKey = `fbea043a3c662cf4f3b5157ea45f2c8a`;
+  const apiUnits = `units=metric`;
 
   function handleResponse(response) {
     console.log(response.data);
@@ -30,9 +33,6 @@ export default function WeatherApp(props) {
   }
 
   function search() {
-    const apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?`;
-    const apiKey = `fbea043a3c662cf4f3b5157ea45f2c8a`;
-    let apiUnits = `units=metric`;
     let apiUrl = `${apiEndpoint}q=${city}&APPID=${apiKey}&${apiUnits}`;
 
     axios.get(apiUrl).then(handleResponse);
@@ -45,6 +45,23 @@ export default function WeatherApp(props) {
 
   function handleCityChange(event) {
     setCity(event.target.value);
+  }
+
+  function getCurrentPosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
+  function showPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let local = "lat=" + lat + "&lon=" + lon;
+
+    axios
+      .get(
+        `${apiEndpoint}/data/2.5/weather?${local}&APPID=${apiKey}&${apiUnits}`
+      )
+      .then(handleResponse);
   }
 
   if (weatherData.ready) {
@@ -69,7 +86,10 @@ export default function WeatherApp(props) {
                 >
                   Search
                 </button>
-                <button className="btn btn-primary SearchButton Now">
+                <button
+                  className="btn btn-primary SearchButton Now"
+                  onClick={getCurrentPosition}
+                >
                   Now
                 </button>
               </form>
