@@ -8,24 +8,32 @@ export default function WeatherProperties(props) {
     <div className="WeatherProperties">
       <ul>
         <li>
-          <img
-            src={humidity}
-            alt="three little drops"
-            className="TemperaturePropertiesIcon"
-          />
-          <span className="">{Math.round(props.data.humidity)}</span> %
+          <span className="PropertiesIcon">
+            <img
+              src={humidity}
+              alt="three little drops"
+              className="TemperaturePropertiesIcon"
+            />
+          </span>
+          <span className="Properties">{Math.round(props.data.humidity)}</span>{" "}
+          %
         </li>
         <li>
-          <img
-            src={wind}
-            alt="wind blowing"
-            className="TemperaturePropertiesIcon"
-          />
-          <span className="">{Math.round(props.data.wind)}</span> km/h
+          <span className="PropertiesIcon">
+            <img
+              src={wind}
+              alt="wind blowing"
+              className="TemperaturePropertiesIcon"
+            />
+          </span>
+          <span className="Properties">{Math.round(props.data.wind)}</span> km/h
         </li>
         <li>
-          <img src={thermo} alt="thermometer" className="FeelsLikeIcon" />
-          <span className="">{Math.round(props.data.feelsLike)}</span>°
+          <span className="PropertiesIcon">
+            <img src={thermo} alt="thermometer" className="FeelsLikeIcon" />
+          </span>
+          <span className="Properties">{Math.round(props.data.feelsLike)}</span>
+          °
         </li>
       </ul>
     </div>

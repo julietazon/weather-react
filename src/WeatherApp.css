@@ -164,10 +164,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .WeatherProperties ul {
   list-style: none;
   line-height: 3rem;
-  font-weight: 300;
+  font-weight: 350;
 }
 
-.WeatherProperties span {
+.WeatherProperties .Properties {
   font-size: 0.9rem;
   margin-left: 0.5rem;
 }
