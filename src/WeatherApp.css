@@ -165,14 +165,24 @@
   font-size: 1rem;
   font-weight: 350;
   letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.ForecastTemperature {
+  margin-top: 2.5rem;
 }
 
 .Forecast .MinTemperature {
   font-weight: 250;
 }
 
+.ForecastIcon {
+  position: absolute;
+}
+
 .Forecast img {
   width: 3rem;
+  margin-top: 0.5rem;
 }
 
 .Forecast ul {

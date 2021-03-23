@@ -15,7 +15,7 @@ export default function Forecast(props) {
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[date.getDay()];
   }
-  if (loaded) {
+  if (loaded && forecast.lat === props.lat && forecast.lon === props.lon) {
     console.log(forecast);
     return (
       <div className="row Forecast d-flex">
@@ -24,7 +24,7 @@ export default function Forecast(props) {
             <h3 className="ForecastDate">
               {formatDay(forecast.daily[0].dt * 1000)}
             </h3>
-            <div>
+            <div className="ForecastIcon">
               <WeatherIcon
                 code={forecast.daily[0].weather[0].icon}
                 alt="weather forecast"
@@ -44,9 +44,9 @@ export default function Forecast(props) {
           </li>
           <li className="">
             <h3 className="ForecastDate">
-              {formatDay(forecast.daily[0].dt * 1000)}
+              {formatDay(forecast.daily[1].dt * 1000)}
             </h3>
-            <div className="">
+            <div className="ForecastIcon">
               <WeatherIcon
                 code={forecast.daily[1].weather[0].icon}
                 alt="weather forecast"
@@ -67,9 +67,9 @@ export default function Forecast(props) {
 
           <li className="">
             <h3 className="ForecastDate">
-              {formatDay(forecast.daily[0].dt * 1000)}
+              {formatDay(forecast.daily[2].dt * 1000)}
             </h3>
-            <div className="">
+            <div className="ForecastIcon">
               <WeatherIcon
                 code={forecast.daily[2].weather[0].icon}
                 alt="weather forecast"
@@ -90,9 +90,9 @@ export default function Forecast(props) {
 
           <li className="">
             <h3 className="ForecastDate">
-              {formatDay(forecast.daily[0].dt * 1000)}
+              {formatDay(forecast.daily[3].dt * 1000)}
             </h3>
-            <div className="">
+            <div className="ForecastIcon">
               <WeatherIcon
                 code={forecast.daily[3].weather[0].icon}
                 alt="weather forecast"
@@ -113,9 +113,9 @@ export default function Forecast(props) {
 
           <li className="">
             <h3 className="ForecastDate">
-              {formatDay(forecast.daily[0].dt * 1000)}
+              {formatDay(forecast.daily[4].dt * 1000)}
             </h3>
-            <div className="">
+            <div className="ForecastIcon">
               <WeatherIcon
                 code={forecast.daily[4].weather[0].icon}
                 alt="weather forecast"
