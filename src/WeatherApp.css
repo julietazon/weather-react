@@ -161,6 +161,16 @@
   width: 0.7rem;
 }
 
+.Forecast h3 {
+  font-size: 1rem;
+  font-weight: 350;
+  letter-spacing: 0.1rem;
+}
+
+.Forecast .MinTemperature {
+  font-weight: 250;
+}
+
 .Forecast img {
   width: 3rem;
 }
@@ -175,8 +185,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 footer {

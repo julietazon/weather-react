@@ -10,12 +10,20 @@ export default function Forecast(props) {
     setForecast(response.data);
     setLoaded(true);
   }
+  function formatDay(timestamp) {
+    let date = new Date(timestamp);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[date.getDay()];
+  }
   if (loaded) {
+    console.log(forecast);
     return (
       <div className="row Forecast d-flex">
         <ul className="d-flex justify-content-between">
           <li className="">
-            <h3 className="ForecastDate"></h3>
+            <h3 className="ForecastDate">
+              {formatDay(forecast.daily[0].dt * 1000)}
+            </h3>
             <div>
               <WeatherIcon
                 code={forecast.daily[0].weather[0].icon}
@@ -29,13 +37,15 @@ export default function Forecast(props) {
               </span>
               <span>° </span>
               <span className="MinTemperature">
-                {Math.round(forecast.daily[0].temp.min)}
+                <span>{Math.round(forecast.daily[0].temp.min)}</span>
+                <span>°</span>
               </span>
-              <span>°</span>
             </div>
           </li>
           <li className="">
-            <h3 className="ForecastDate"></h3>
+            <h3 className="ForecastDate">
+              {formatDay(forecast.daily[0].dt * 1000)}
+            </h3>
             <div className="">
               <WeatherIcon
                 code={forecast.daily[1].weather[0].icon}
@@ -49,14 +59,16 @@ export default function Forecast(props) {
               </span>
               <span>° </span>
               <span className="MinTemperature">
-                {Math.round(forecast.daily[1].temp.min)}
+                <span>{Math.round(forecast.daily[1].temp.min)}</span>
+                <span>°</span>
               </span>
-              <span>°</span>
             </div>
           </li>
 
           <li className="">
-            <h3 className="ForecastDate"></h3>
+            <h3 className="ForecastDate">
+              {formatDay(forecast.daily[0].dt * 1000)}
+            </h3>
             <div className="">
               <WeatherIcon
                 code={forecast.daily[2].weather[0].icon}
@@ -70,14 +82,16 @@ export default function Forecast(props) {
               </span>
               <span>° </span>
               <span className="MinTemperature">
-                {Math.round(forecast.daily[2].temp.min)}
+                <span>{Math.round(forecast.daily[2].temp.min)}</span>
+                <span>°</span>
               </span>
-              <span>°</span>
             </div>
           </li>
 
           <li className="">
-            <h3 className="ForecastDate"></h3>
+            <h3 className="ForecastDate">
+              {formatDay(forecast.daily[0].dt * 1000)}
+            </h3>
             <div className="">
               <WeatherIcon
                 code={forecast.daily[3].weather[0].icon}
@@ -91,14 +105,16 @@ export default function Forecast(props) {
               </span>
               <span>° </span>
               <span className="MinTemperature">
-                {Math.round(forecast.daily[3].temp.min)}
+                <span>{Math.round(forecast.daily[3].temp.min)}</span>
+                <span>°</span>
               </span>
-              <span>°</span>
             </div>
           </li>
 
           <li className="">
-            <h3 className="ForecastDate"></h3>
+            <h3 className="ForecastDate">
+              {formatDay(forecast.daily[0].dt * 1000)}
+            </h3>
             <div className="">
               <WeatherIcon
                 code={forecast.daily[4].weather[0].icon}
@@ -112,9 +128,9 @@ export default function Forecast(props) {
               </span>
               <span>° </span>
               <span className="MinTemperature">
-                {Math.round(forecast.daily[4].temp.min)}
+                <span>{Math.round(forecast.daily[4].temp.min)}</span>
+                <span>°</span>
               </span>
-              <span>°</span>
             </div>
           </li>
         </ul>
