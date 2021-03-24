@@ -56,12 +56,9 @@ export default function WeatherApp(props) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
     let local = "lat=" + lat + "&lon=" + lon;
+    let apiUrl = `${apiEndpoint}/data/2.5/weather?${local}&APPID=${apiKey}&${apiUnits}`;
 
-    axios
-      .get(
-        `${apiEndpoint}/data/2.5/weather?${local}&APPID=${apiKey}&${apiUnits}`
-      )
-      .then(handleResponse);
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherData.ready) {
