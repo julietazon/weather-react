@@ -18,9 +18,9 @@ export default function Forecast(props) {
   if (loaded && forecast.lat === props.lat && forecast.lon === props.lon) {
     console.log(forecast);
     return (
-      <div className="row Forecast d-flex">
-        <ul className="d-flex justify-content-between">
-          <li className="">
+      <div className="row Forecast">
+        <ul className="">
+          <li className="ForecastItem">
             <h3 className="ForecastDate">
               {formatDay(forecast.daily[0].dt * 1000)}
             </h3>
@@ -42,7 +42,7 @@ export default function Forecast(props) {
               </span>
             </div>
           </li>
-          <li className="">
+          <li className="ForecastItem">
             <h3 className="ForecastDate">
               {formatDay(forecast.daily[1].dt * 1000)}
             </h3>
@@ -65,7 +65,7 @@ export default function Forecast(props) {
             </div>
           </li>
 
-          <li className="">
+          <li className="ForecastItem">
             <h3 className="ForecastDate">
               {formatDay(forecast.daily[2].dt * 1000)}
             </h3>
@@ -88,7 +88,7 @@ export default function Forecast(props) {
             </div>
           </li>
 
-          <li className="">
+          <li className="ForecastItem">
             <h3 className="ForecastDate">
               {formatDay(forecast.daily[3].dt * 1000)}
             </h3>
@@ -111,7 +111,7 @@ export default function Forecast(props) {
             </div>
           </li>
 
-          <li className="">
+          <li className="ForecastItem">
             <h3 className="ForecastDate">
               {formatDay(forecast.daily[4].dt * 1000)}
             </h3>
