@@ -1,7 +1,14 @@
 .wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
 }
 
 .wrapper > * {
+  padding: 1rem;
+  flex: 1 100%;
+  margin: 0 auto;
 }
 
 @media all and (min-width: 600px) {
@@ -36,7 +43,7 @@
 }
 
 .WeatherApp {
-  color: rgb(231, 13, 13);
+  color: rgb(255, 255, 255);
   border: 0.06rem solid #dadde1;
   border-radius: 1.25rem;
   background-color: rgb(14, 114, 208);
