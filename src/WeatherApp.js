@@ -74,13 +74,13 @@ export default function WeatherApp(props) {
                 <input
                   type="search"
                   className="form-control"
+                  label="enter city..."
                   autoComplete="off"
                   autoFocus="on"
                   onChange={handleCityChange}
                 />
                 <button
                   type="submit"
-                  value="Search"
                   autoFocus="on"
                   className="d-flex btn default SearchButton"
                 >

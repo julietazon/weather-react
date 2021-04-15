@@ -1,14 +1,14 @@
 .wrapper {
   display: flex;
   flex-flow: row wrap;
-  font-weight: bold;
   text-align: center;
+  font-weight: bold;
 }
 
 .wrapper > * {
-  padding: 1rem;
   flex: 1 100%;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 @media all and (min-width: 600px) {
@@ -38,7 +38,7 @@
   }
 
   .WeatherApp {
-    max-height: 40rem;
+    max-height: 36rem;
   }
 }
 
@@ -55,14 +55,14 @@
 }
 
 input[type="search"]::-ms-clear {
-  display: none;
   width: 0;
   height: 0;
+  display: none;
 }
 input[type="search"]::-ms-reveal {
-  display: none;
   width: 0;
   height: 0;
+  display: none;
 }
 
 /* clears the 'X' from Chrome */
@@ -74,15 +74,15 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .WeatherApp .form button {
-  margin-left: 1rem;
   display: flex;
+  margin-left: 1rem;
 }
 
 .SearchButton {
-  background: rgba(255, 255, 255, 0.193);
   color: white;
   border: 0.15rem solid rgba(255, 255, 255, 0.193);
   display: inline-block;
+  background: rgba(255, 255, 255, 0.193);
 }
 
 .Weather .WeatherApp .Now {
@@ -91,9 +91,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .WeatherApp .SearchButton:hover {
-  background: rgba(14, 114, 208, 0.33);
   color: white;
   border: 0.15rem solid rgba(255, 255, 255, 0.193);
+  background: rgba(14, 114, 208, 0.33);
 }
 
 .PlaceInfo {
@@ -101,19 +101,19 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .PlaceInfo ul {
+  display: block;
+  text-align: left;
   list-style: none;
-  text-transform: capitalize;
   line-height: 1.2rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
-  display: block;
-  text-align: left;
+  text-transform: capitalize;
 }
 
 .PlaceInfo-city {
   font-size: 1.5rem;
-  line-height: 3rem;
   font-weight: 500;
+  line-height: 3rem;
 }
 
 .WeatherTemperature {
@@ -121,19 +121,19 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .WeatherTemperature ul {
-  list-style: none;
-  display: inline;
   margin: 0 auto;
+  display: inline;
+  list-style: none;
 }
 
 .WeatherTemperature li {
-  flex-flow: row wrap;
-  flex-wrap: wrap;
-  flex-grow: 3;
-  justify-content: space-around;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: inline;
+  flex-grow: 3;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .MainWeatherIcon img {
@@ -144,21 +144,20 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .MainWeatherDegrees {
   color: rgb(255, 255, 255);
-  font-weight: bold;
+  margin: 0 auto;
+  display: inline;
   font-size: 8rem;
   font-weight: 200;
-  display: inline;
-  margin: 0 auto;
 }
 
 .WeatherDegrees .MainTemperatureUnits {
+  left: 7rem;
   color: rgb(255, 255, 255);
-  font-size: 1.2rem;
-  font-weight: 300;
+  bottom: 8.5rem;
   display: block;
   position: relative;
-  bottom: 8.5rem;
-  left: 7rem;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .MainTemperatureUnits:hover {
@@ -167,8 +166,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .WeatherProperties ul {
   list-style: none;
-  line-height: 3rem;
   font-weight: 350;
+  line-height: 3rem;
+}
+
+.WeatherProperties {
+  margin-bottom: 3rem;
 }
 
 .WeatherProperties .Properties {
@@ -184,20 +187,23 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 0.7rem;
 }
 
+.Forecast {
+  margin-top: -4rem;
+}
+
 .ForecastItem {
   padding: 1rem;
-  margin-top: -0.5rem;
 }
 
 .Forecast h3 {
   font-size: 1rem;
   font-weight: 350;
-  letter-spacing: 0.1rem;
   text-align: center;
+  letter-spacing: 0.1rem;
 }
 
 .ForecastTemperature {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .Forecast .MinTemperature {
@@ -210,17 +216,16 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .Forecast img {
   width: 3rem;
-  margin-top: 0.5rem;
 }
 
 .Forecast ul {
-  display: flex;
-  flex-flow: row wrap;
-  flex-wrap: wrap;
-  flex-grow: 3;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  flex-grow: 3;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
