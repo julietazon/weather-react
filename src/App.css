@@ -7,3 +7,8 @@
 .App {
   margin: 0.5rem;
 }
+
+.fullApp {
+  border-radius: 1.25rem;
+  background-color: rgb(14, 114, 208);
+}

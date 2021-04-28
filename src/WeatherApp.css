@@ -44,15 +44,18 @@
 
 .WeatherApp {
   color: rgb(255, 255, 255);
-  border: 0.06rem solid #dadde1;
+  margin: 0 auto;
+  max-width: 1028px;
   border-radius: 1.25rem;
   background-color: rgb(14, 114, 208);
 }
 
+/*
 .WeatherApp .form {
   flex: 0.5;
   position: relative;
 }
+*/
 
 input[type="search"]::-ms-clear {
   width: 0;
@@ -74,14 +77,18 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .WeatherApp .form button {
+  /*
   display: flex;
+  */
   margin-left: 1rem;
 }
 
 .SearchButton {
   color: white;
   border: 0.15rem solid rgba(255, 255, 255, 0.193);
+  /*
   display: inline-block;
+  */
   background: rgba(255, 255, 255, 0.193);
 }
 
@@ -130,7 +137,6 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0;
   padding: 0;
   display: inline;
-  flex-grow: 3;
   flex-wrap: wrap;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -188,7 +194,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .Forecast {
-  margin-top: -4rem;
+  margin-top: -3rem;
 }
 
 .ForecastItem {

@@ -4,7 +4,9 @@ import WeatherApp from "./WeatherApp";
 function App() {
   return (
     <div className="App wrapper">
-      <WeatherApp defaultCity="São Paulo" />
+      <div className="fullApp">
+        <WeatherApp defaultCity="São Paulo" />
+      </div>
       <footer className="WeatherApp-footer">
         <small>
           This app was coded by JulietaZon and is <br />

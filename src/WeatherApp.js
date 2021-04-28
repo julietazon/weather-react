@@ -69,12 +69,11 @@ export default function WeatherApp(props) {
       <div className="WeatherApp">
         <div className="wrapper">
           <header className="WeatherApp-search">
-            <div className="d-flex justify-content-center Dictionary">
+            <div className="d-flex justify-content-center">
               <form onSubmit={handleSubmit} className="d-flex form">
                 <input
                   type="search"
                   className="form-control"
-                  label="enter city..."
                   autoComplete="off"
                   autoFocus="on"
                   onChange={handleCityChange}
