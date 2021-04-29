@@ -1,61 +1,66 @@
 .wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  font-weight: bold;
+  color: white;
+  background: rgb(14, 114, 208);
+  border-radius: 1.25rem;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0;
+  width: 100%;
 }
 
-.wrapper > * {
-  flex: 1 100%;
+@media screen and (min-width: 526px) and (max-width: 990px) {
+  WeatherTemperature {
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .wrapper {
+    color: white;
+    background: rgb(14, 114, 208);
+    border-radius: 1.25rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .wrapper {
+    color: white;
+    background: rgb(14, 114, 208);
+    border-radius: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.WeatherApp {
+  width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
 }
 
-@media all and (min-width: 600px) {
-  .aside {
-    flex: 1 0 0;
-  }
+.WeatherSearch {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
-@media all and (min-width: 800px) {
-  .WeatherApp-search {
-    order: 1;
-  }
-  .WeatherApp-main {
-    order: 2;
-  }
-  .WeatherApp-aside-1 {
-    order: 3;
-  }
-  .WeatherApp-aside-2 {
-    order: 4;
-  }
-  .WeatherApp-forecast {
-    order: 5;
-  }
-  .WeatherApp-footer {
-    order: 6;
-  }
-
-  .WeatherApp {
-    max-height: 38rem;
-  }
+.WeatherMain {
+  max-width: 70%;
 }
 
 .WeatherApp {
   color: rgb(255, 255, 255);
   margin: 0 auto;
-  max-width: 1028px;
-  border-radius: 1.25rem;
-  background-color: rgb(14, 114, 208);
 }
 
-/*
-.WeatherApp .form {
-  flex: 0.5;
-  position: relative;
+.location {
+  width: 0.79rem;
+  color: white;
+  position: 50%, 50%;
 }
-*/
 
 input[type="search"]::-ms-clear {
   width: 0;
@@ -77,19 +82,14 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .WeatherApp .form button {
-  /*
-  display: flex;
-  */
   margin-left: 1rem;
 }
 
 .SearchButton {
   color: white;
   border: 0.15rem solid rgba(255, 255, 255, 0.193);
-  /*
-  display: inline-block;
-  */
   background: rgba(255, 255, 255, 0.193);
+  padding-top: 0.5rem;
 }
 
 .Weather .WeatherApp .Now {
@@ -157,9 +157,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .WeatherDegrees .MainTemperatureUnits {
-  left: 7rem;
+  left: 9rem;
   color: rgb(255, 255, 255);
-  bottom: 8.5rem;
+  bottom: 9rem;
   display: block;
   position: relative;
   font-size: 1.2rem;
@@ -178,6 +178,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .WeatherProperties {
   margin-bottom: 3rem;
+  margin-right: 2.5rem;
 }
 
 .WeatherProperties .Properties {
@@ -191,54 +192,58 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .WeatherProperties .FeelsLikeIcon {
   width: 0.7rem;
+  margin-left: 0.7rem;
+  margin-right: 0.3rem;
 }
 
 .Forecast {
-  margin-top: -3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
-.ForecastItem {
-  padding: 1rem;
+.ForecastElement {
+  margin-top: 1rem;
 }
 
-.Forecast h3 {
+.ForecastDate {
   font-size: 1rem;
-  font-weight: 350;
   text-align: center;
+  font-weight: 350;
   letter-spacing: 0.1rem;
+}
+
+.ForecastDate span {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .ForecastTemperature {
   margin-top: 2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.Forecast .MaxTemperature {
+  font-weight: 550;
 }
 
 .Forecast .MinTemperature {
   font-weight: 250;
 }
 
-.ForecastIcon {
-  position: absolute;
-}
-
 .Forecast img {
   width: 3rem;
-}
-
-.Forecast ul {
-  margin: 0;
-  padding: 0;
-  flex-grow: 3;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 footer {
-  font-size: smaller;
-  letter-spacing: 0.1rem;
   color: rgb(70, 70, 70);
+  font-size: smaller;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 footer .Link {

@@ -18,122 +18,143 @@ export default function Forecast(props) {
   if (loaded && forecast.lat === props.lat && forecast.lon === props.lon) {
     console.log(forecast);
     return (
-      <div className="row Forecast">
-        <ul className="">
-          <li className="ForecastItem">
-            <h3 className="ForecastDate">
-              {formatDay(forecast.daily[0].dt * 1000)}
-            </h3>
-            <div className="ForecastIcon">
-              <WeatherIcon
-                code={forecast.daily[0].weather[0].icon}
-                alt="weather forecast"
-              />
+      <div className="container Forecast">
+        <div className="row d-flex justify-content-center">
+          <div className="col col-md-2 ForecastElement">
+            <div className="row ForecastDate">
+              <span className="col">
+                {formatDay(forecast.daily[0].dt * 1000)}
+              </span>
+            </div>
+            <div className="row">
+              <div className="col">
+                <WeatherIcon
+                  code={forecast.daily[0].weather[0].icon}
+                  alt="weather forecast"
+                />
+              </div>
             </div>
             <br />
-            <div className="ForecastTemperature">
-              <span className="MaxTemperature">
-                {Math.round(forecast.daily[0].temp.max)}
-              </span>
-              <span>° </span>
-              <span className="MinTemperature">
-                <span>{Math.round(forecast.daily[0].temp.min)}</span>
-                <span>°</span>
-              </span>
+            <div className="row ForecastTemperature">
+              <div className="col d-flex flex-nowrap justify-content-center">
+                <span className="MaxTemperature">
+                  {Math.round(forecast.daily[0].temp.max)}°
+                </span>
+                <span className="MinTemperature">
+                  <span> {Math.round(forecast.daily[0].temp.min)}°</span>
+                </span>
+              </div>
             </div>
-          </li>
-          <li className="ForecastItem">
-            <h3 className="ForecastDate">
-              {formatDay(forecast.daily[1].dt * 1000)}
-            </h3>
-            <div className="ForecastIcon">
-              <WeatherIcon
-                code={forecast.daily[1].weather[0].icon}
-                alt="weather forecast"
-              />
-            </div>
-            <br />
-            <div className="ForecastTemperature">
-              <span className="MaxTemperature">
-                {Math.round(forecast.daily[1].temp.max)}
-              </span>
-              <span>° </span>
-              <span className="MinTemperature">
-                <span>{Math.round(forecast.daily[1].temp.min)}</span>
-                <span>°</span>
-              </span>
-            </div>
-          </li>
+          </div>
 
-          <li className="ForecastItem">
-            <h3 className="ForecastDate">
-              {formatDay(forecast.daily[2].dt * 1000)}
-            </h3>
-            <div className="ForecastIcon">
-              <WeatherIcon
-                code={forecast.daily[2].weather[0].icon}
-                alt="weather forecast"
-              />
+          <div className="col col-md-2 ForecastElement">
+            <div className="row ForecastDate">
+              <span className="col">
+                {formatDay(forecast.daily[1].dt * 1000)}
+              </span>
+            </div>
+            <div className="row">
+              <div className="col">
+                <WeatherIcon
+                  code={forecast.daily[1].weather[0].icon}
+                  alt="weather forecast"
+                />
+              </div>
             </div>
             <br />
-            <div className="ForecastTemperature">
-              <span className="MaxTemperature">
-                {Math.round(forecast.daily[2].temp.max)}
-              </span>
-              <span>° </span>
-              <span className="MinTemperature">
-                <span>{Math.round(forecast.daily[2].temp.min)}</span>
-                <span>°</span>
-              </span>
+            <div className="row ForecastTemperature">
+              <div className="col d-flex flex-nowrap justify-content-center">
+                <span className="MaxTemperature">
+                  {Math.round(forecast.daily[1].temp.max)}°
+                </span>
+                <span className="MinTemperature">
+                  <span> {Math.round(forecast.daily[1].temp.min)}°</span>
+                </span>
+              </div>
             </div>
-          </li>
+          </div>
 
-          <li className="ForecastItem">
-            <h3 className="ForecastDate">
-              {formatDay(forecast.daily[3].dt * 1000)}
-            </h3>
-            <div className="ForecastIcon">
-              <WeatherIcon
-                code={forecast.daily[3].weather[0].icon}
-                alt="weather forecast"
-              />
+          <div className="col col-md-2 ForecastElement">
+            <div className="row ForecastDate">
+              <span className="col">
+                {formatDay(forecast.daily[2].dt * 1000)}
+              </span>
+            </div>
+            <div className="row">
+              <div className="col">
+                <WeatherIcon
+                  code={forecast.daily[2].weather[0].icon}
+                  alt="weather forecast"
+                />
+              </div>
             </div>
             <br />
-            <div className="ForecastTemperature">
-              <span className="MaxTemperature">
-                {Math.round(forecast.daily[3].temp.max)}
-              </span>
-              <span>° </span>
-              <span className="MinTemperature">
-                <span>{Math.round(forecast.daily[3].temp.min)}</span>
-                <span>°</span>
-              </span>
+            <div className="row ForecastTemperature">
+              <div className="col d-flex flex-nowrap justify-content-center">
+                <span className="MaxTemperature">
+                  {Math.round(forecast.daily[2].temp.max)}°
+                </span>
+                <span className="MinTemperature">
+                  <span> {Math.round(forecast.daily[2].temp.min)}°</span>
+                </span>
+              </div>
             </div>
-          </li>
+          </div>
 
-          <li className="ForecastItem">
-            <h3 className="ForecastDate">
-              {formatDay(forecast.daily[4].dt * 1000)}
-            </h3>
-            <div className="ForecastIcon">
-              <WeatherIcon
-                code={forecast.daily[4].weather[0].icon}
-                alt="weather forecast"
-              />
+          <div className="col col-md-2 ForecastElement">
+            <div className="row ForecastDate">
+              <span className="col">
+                {formatDay(forecast.daily[3].dt * 1000)}
+              </span>
+            </div>
+            <div className="row">
+              <div className="col">
+                <WeatherIcon
+                  code={forecast.daily[3].weather[0].icon}
+                  alt="weather forecast"
+                />
+              </div>
             </div>
             <br />
-            <div className="ForecastTemperature">
-              <span className="MaxTemperature">
-                {Math.round(forecast.daily[4].temp.max)}
-              </span>
-              <span>° </span>
-              <span className="MinTemperature">
-                <span>{Math.round(forecast.daily[4].temp.min)}</span>
-                <span>°</span>
+            <div className="row ForecastTemperature">
+              <div className="col d-flex flex-nowrap justify-content-center">
+                <span className="MaxTemperature">
+                  {Math.round(forecast.daily[3].temp.max)}°
+                </span>
+                <span className="MinTemperature">
+                  <span> {Math.round(forecast.daily[3].temp.min)}°</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="col col-md-2 ForecastElement">
+            <div className="row ForecastDate">
+              <span className="col">
+                {formatDay(forecast.daily[4].dt * 1000)}
               </span>
             </div>
-          </li>
-        </ul>
+            <div className="row">
+              <div className="col">
+                <WeatherIcon
+                  code={forecast.daily[4].weather[0].icon}
+                  alt="weather forecast"
+                />
+              </div>
+            </div>
+            <br />
+            <div className="row ForecastTemperature">
+              <div className="col d-flex flex-nowrap justify-content-center">
+                <span className="MaxTemperature">
+                  {Math.round(forecast.daily[4].temp.max)}°
+                </span>
+                <span className="MinTemperature">
+                  <span> {Math.round(forecast.daily[4].temp.min)}°</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {

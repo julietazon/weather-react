@@ -3,11 +3,11 @@ import WeatherApp from "./WeatherApp";
 
 function App() {
   return (
-    <div className="App wrapper">
-      <div className="fullApp">
+    <div className="container App">
+      <main className="row wrapper">
         <WeatherApp defaultCity="São Paulo" />
-      </div>
-      <footer className="WeatherApp-footer">
+      </main>
+      <footer className="row d-flex justify-content-center">
         <small>
           This app was coded by JulietaZon and is <br />
           <span

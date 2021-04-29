@@ -7,7 +7,7 @@ export default function WeatherProperties(props) {
   return (
     <div className="WeatherProperties">
       <ul>
-        <li>
+        <li className="d-flex flex-nowrap">
           <span className="PropertiesIcon">
             <img
               src={humidity}
@@ -18,7 +18,7 @@ export default function WeatherProperties(props) {
           <span className="Properties">{Math.round(props.data.humidity)}</span>{" "}
           %
         </li>
-        <li>
+        <li className="d-flex flex-nowrap">
           <span className="PropertiesIcon">
             <img
               src={wind}
@@ -28,7 +28,7 @@ export default function WeatherProperties(props) {
           </span>
           <span className="Properties">{Math.round(props.data.wind)}</span> km/h
         </li>
-        <li>
+        <li className="d-flex flex-nowrap">
           <span className="PropertiesIcon">
             <img src={thermo} alt="thermometer" className="FeelsLikeIcon" />
           </span>

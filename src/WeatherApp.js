@@ -5,6 +5,7 @@ import WeatherProperties from "./WeatherProperties";
 import Forecast from "./Forecast";
 import axios from "axios";
 import Loader from "react-loader-spinner";
+import location from "./img/location.png";
 import "./WeatherApp.css";
 
 export default function WeatherApp(props) {
@@ -66,47 +67,49 @@ export default function WeatherApp(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="WeatherApp">
-        <div className="wrapper">
-          <header className="WeatherApp-search">
-            <div className="d-flex justify-content-center">
-              <form onSubmit={handleSubmit} className="d-flex form">
-                <input
-                  type="search"
-                  className="form-control"
-                  autoComplete="off"
-                  autoFocus="on"
-                  onChange={handleCityChange}
-                />
-                <button
-                  type="submit"
-                  autoFocus="on"
-                  className="d-flex btn default SearchButton"
-                >
-                  Search
-                </button>
-                <button
-                  className="btn btn-primary SearchButton Now"
-                  type="submit"
-                  onClick={getCurrentPosition}
-                >
-                  Now
-                </button>
-              </form>
+      <div className="container WeatherApp">
+        <header className="row d-flex justify-content-center WeatherSearch">
+          <form onSubmit={handleSubmit} className="d-flex form">
+            <input
+              type="search"
+              className="form-control"
+              autoComplete="off"
+              autoFocus="on"
+              onChange={handleCityChange}
+            />
+            <button
+              type="submit"
+              autoFocus="on"
+              className="d-flex btn default SearchButton"
+            >
+              <i className="fa fa-search" alt="magnifying glass"></i>
+            </button>
+            <button
+              type="submit"
+              onClick={getCurrentPosition}
+              className="d-flex btn default SearchButton Now"
+            >
+              <img src={location} alt="location pin" className="location"></img>
+            </button>
+          </form>
+        </header>
+        <div className="container WeatherMain">
+          <div className="row">
+            <div className="d-flex justify-content-start WeatherApp-main">
+              <PlaceInfo data={weatherData} />
             </div>
-          </header>
-          <main className="WeatherApp-main">
-            <PlaceInfo data={weatherData} />
-          </main>
-          <aside className="aside WeatherApp-aside-1">
-            <WeatherTemperature data={weatherData} />
-          </aside>
-          <aside className="aside WeatherApp-aside-2">
-            <WeatherProperties data={weatherData} />
-          </aside>
-          <main className="WeatherApp-forecast">
+          </div>
+          <div className="row d-flex align-content-around flex-wrap Overview">
+            <div className="col col-sm-8">
+              <WeatherTemperature data={weatherData} />
+            </div>
+            <div className="col col-sm-4 d-flex justify-content-center">
+              <WeatherProperties data={weatherData} />
+            </div>
+          </div>
+          <div className="WeatherApp-forecast">
             <Forecast lat={weatherData.lat} lon={weatherData.lon} />
-          </main>
+          </div>
         </div>
       </div>
     );

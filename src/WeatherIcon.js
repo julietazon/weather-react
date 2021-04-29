@@ -41,6 +41,10 @@ export default function WeatherIcon(props) {
   };
 
   return (
-    <img src={fetchIcon[props.code]} alt="weather" className="WeatherIcon" />
+    <img
+      src={fetchIcon[props.code]}
+      alt="weather"
+      className="mx-auto d-block WeatherIcon"
+    />
   );
 }
