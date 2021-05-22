@@ -8,11 +8,6 @@
   width: 100%;
 }
 
-@media screen and (min-width: 526px) and (max-width: 990px) {
-  WeatherTemperature {
-  }
-}
-
 @media screen and (min-width: 576px) {
   .wrapper {
     color: white;
@@ -22,6 +17,16 @@
     margin-top: 1rem;
     padding: 0;
     width: 100%;
+  }
+
+  .WeatherSearch {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .WeatherProperties {
+    margin-bottom: 3rem;
+    margin-right: 2.5rem;
   }
 }
 
@@ -34,17 +39,23 @@
     padding: 0;
     width: 100%;
   }
+
+  .WeatherSearch {
+    margin-top: 4.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .WeatherProperties {
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    margin-right: 2.5rem;
+  }
 }
 
 .WeatherApp {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-}
-
-.WeatherSearch {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
 }
 
 .WeatherMain {
@@ -81,8 +92,14 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.WeatherApp .form {
+  margin-top: 0rem;
+  box-shadow: 10px 10px 90px 10px rgba(0, 0, 0, 0.1);
+}
+
 .WeatherApp .form button {
-  margin-left: 1rem;
+  margin-left: 0.3rem;
+  box-shadow: 10px 10px 90px 10px rgba(0, 0, 0, 0.1);
 }
 
 .SearchButton {
@@ -176,11 +193,6 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 3rem;
 }
 
-.WeatherProperties {
-  margin-bottom: 3rem;
-  margin-right: 2.5rem;
-}
-
 .WeatherProperties .Properties {
   font-size: 0.9rem;
   margin-left: 0.5rem;
@@ -252,4 +264,10 @@ footer .Link {
 
 footer .Link:hover {
   cursor: pointer;
+}
+
+.Loader {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }

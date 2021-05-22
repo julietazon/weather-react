@@ -119,7 +119,7 @@ export default function WeatherApp(props) {
       <div className="text-center Loader">
         <Loader
           type="Puff"
-          color="#00BFFF"
+          color="#D1E8F7"
           height={150}
           width={150}
           timeout={3000} //3 secs

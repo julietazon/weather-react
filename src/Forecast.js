@@ -163,8 +163,8 @@ export default function Forecast(props) {
     let apiUrl = `${apiEndpoint}lat=${props.lat}&lon=${props.lon}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleForecastResponse);
     return (
-      <div className="text-center">
-        <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+      <div className="text-center Loader">
+        <Loader type="ThreeDots" color="#D1E8F7" height={80} width={80} />
       </div>
     );
   }
